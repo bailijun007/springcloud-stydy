@@ -17,6 +17,7 @@
         <module>springcloud-study-eureka-7004</module>
         <module>springcloud-study-provider-dept-8002</module>
         <module>springcloud-study-provider-dept-8003</module>
+        <module>springcloud-study-consumer-dept-feign</module>
 
     </modules>
     <properties>
