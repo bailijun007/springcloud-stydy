@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @SpringBootApplication
 @EnableEurekaClient
 //在启动该微服务式是能去加载我们定义的Ribbon配置类
-@RibbonClient(name="STUDY-SPRINGCLOUD-DEPT",configuration = MySelfRule.class)
+//@RibbonClient(name="STUDY-SPRINGCLOUD-DEPT",configuration = MySelfRule.class)
 public class DeptConsumer80_App {
     public static void main(String[] args) {
         SpringApplication.run(DeptConsumer80_App.class,args);

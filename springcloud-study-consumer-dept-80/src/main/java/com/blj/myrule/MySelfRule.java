@@ -13,8 +13,8 @@ public class MySelfRule {
 
     @Bean
     public IRule getMySelfRule(){
-       // return new RandomRule();//随机算法,（Ribbon内置的算法）
-        return new MyRandomRule();//自定义规则（自己定义的算法）
+        return new RandomRule();//随机算法,（Ribbon内置的算法）
+       // return new MyRandomRule();//自定义规则（自己定义的算法）
     }
 
 }
