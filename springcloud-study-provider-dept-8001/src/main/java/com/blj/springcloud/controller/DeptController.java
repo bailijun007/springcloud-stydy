@@ -20,13 +20,13 @@ public class DeptController {
     private DeptService deptService;
 
    // @RequestMapping(value = "/add",produces = "application/json",method = RequestMethod.POST)
-   @PostMapping("add")
+   @PostMapping(value = "add")
     public Boolean addDept(@RequestBody  Dept dept){
         System.out.println("dept = " + dept);
        return deptService.addDept(dept);
     }
 
-    @GetMapping(value = "/get/{deptno}")
+    @GetMapping(value = "/get/{deptno}",produces = "application/json")
     public Dept findById(@PathVariable("deptno") Long deptno){
         return deptService.findById(deptno);
     }

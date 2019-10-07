@@ -14,17 +14,16 @@ public class DeptController_Consumer {
     @Autowired
     private DeptClientService deptClientService;
 
-    @RequestMapping(value = "/dept/add")
-    public boolean add( Dept dept){
+    @PostMapping(value = "/dept/add")
+    public boolean add(@RequestBody Dept dept){
         //三个参数：url,requestMap ResponseBean.class
         return  deptClientService.add(dept);
     }
-    @RequestMapping("/dept/get/{deptno}")
-    public Dept get(Long deptno){
-        //三个参数：url,requestMap ResponseBean.class
+    @GetMapping(value = "/dept/get/{deptno}",produces = "application/json")
+    public Dept findById(@PathVariable("deptno") Long deptno){
         return deptClientService.get(deptno);
     }
-    @RequestMapping("/dept/list")
+    @GetMapping(value = "/dept/list")
     public List list(){
         //三个参数：url,requestMap ResponseBean.class
         return  deptClientService.list();
