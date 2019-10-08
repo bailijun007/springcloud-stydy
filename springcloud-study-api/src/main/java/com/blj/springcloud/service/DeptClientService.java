@@ -16,9 +16,10 @@ public interface DeptClientService {
     @RequestMapping(value = "/dept/add",method = RequestMethod.POST)
     public boolean add(Dept dept);
 
-   // @RequestMapping(value = "/dept/get/{deptno}",method = RequestMethod.GET,produces = "application/json")
-    @GetMapping(value = "/dept/get/{deptno}",produces = "application/json")
-    public Dept get(@PathVariable("deptno") Long deptno);
+    @RequestMapping(value = "/dept/get/{deptno}",method = RequestMethod.GET,produces = "application/json")
+    //@GetMapping(value = "/dept/get/{deptno}",produces = "application/json")
+    public Dept get(@PathVariable("deptno") Long deptno);// 两个坑：1. @GetMapping不支持   2. @PathVariable得设置value
+
 
     @RequestMapping(value = "/dept/list",method = RequestMethod.GET)
     public List list();

@@ -19,7 +19,8 @@ public class DeptController_Consumer {
         //三个参数：url,requestMap ResponseBean.class
         return  deptClientService.add(dept);
     }
-    @GetMapping(value = "/dept/get/{deptno}",produces = "application/json")
+   // @GetMapping(value = "/dept/get/{deptno}",produces = "application/json")
+    @RequestMapping(value = "/dept/get/{deptno}",method = RequestMethod.GET)
     public Dept findById(@PathVariable("deptno") Long deptno){
         return deptClientService.get(deptno);
     }

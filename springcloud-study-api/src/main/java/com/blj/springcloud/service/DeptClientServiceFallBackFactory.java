@@ -3,6 +3,8 @@ package com.blj.springcloud.service;
 import com.blj.springcloud.entities.Dept;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PathVariable;
+
 import java.util.List;
 //@Component 不要忘记添加
 //主业务与熔断方法解耦
@@ -16,7 +18,7 @@ public class DeptClientServiceFallBackFactory implements FallbackFactory<DeptCli
                 return false;
             }
 
-            @Override
+
             public Dept get(Long deptno) {
                  return new Dept()
                          .setDeptno(deptno)

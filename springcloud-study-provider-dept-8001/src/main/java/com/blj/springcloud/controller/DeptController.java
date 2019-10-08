@@ -26,7 +26,8 @@ public class DeptController {
        return deptService.addDept(dept);
     }
 
-    @GetMapping(value = "/get/{deptno}",produces = "application/json")
+   // @GetMapping(value = "/get/{deptno}",produces = "application/json")
+   @RequestMapping(value = "/get/{deptno}",method = RequestMethod.GET)
     public Dept findById(@PathVariable("deptno") Long deptno){
         return deptService.findById(deptno);
     }
