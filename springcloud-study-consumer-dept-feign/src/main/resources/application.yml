@@ -5,7 +5,6 @@ feign:
   hystrix:
     enable: true
 
-
 eureka:
   client:
     service-url:

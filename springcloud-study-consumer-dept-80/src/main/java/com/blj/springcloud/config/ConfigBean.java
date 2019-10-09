@@ -17,10 +17,10 @@ public class ConfigBean {
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
-    @Bean
-    public IRule myRule(){
-        return new RandomRule(); //用我们选择的随机算法
-    }
+//    @Bean
+//    public IRule myRule(){
+//        return new RandomRule(); //用我们选择的随机算法
+//    }
 
 
 

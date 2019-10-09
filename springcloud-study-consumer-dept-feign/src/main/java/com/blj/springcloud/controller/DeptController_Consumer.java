@@ -24,6 +24,7 @@ public class DeptController_Consumer {
     public Dept findById(@PathVariable("deptno") Long deptno){
         return deptClientService.get(deptno);
     }
+
     @GetMapping(value = "/dept/list")
     public List list(){
         //三个参数：url,requestMap ResponseBean.class
