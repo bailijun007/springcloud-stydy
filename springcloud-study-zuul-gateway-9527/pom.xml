@@ -9,28 +9,21 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-study-provider-dept-8001</artifactId>
+    <artifactId>springcloud-study-zuul-gateway-9527</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <groupId>com.blj</groupId>
+            <artifactId>springcloud-study-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
-
-        <!--actuator监控自信息完善-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <!--将微服务provider注册进eureka-->
+        <!--zuul依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-        <!--Hystrix依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
         <dependency>
@@ -39,9 +32,14 @@
         </dependency>
 
         <dependency>
-            <artifactId>springcloud-study-api</artifactId>
-            <groupId>com.blj</groupId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--Hystrix容错-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
         <dependency>
@@ -56,6 +54,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
         <!--热部署 修改后立即生效-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -65,7 +64,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-
     </dependencies>
+
 
 </project>

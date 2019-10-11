@@ -51,7 +51,7 @@ eureka:
     instance-id:  cloud-dept8003 #自定义服务名称信息
     prefer-ip-address: true   #访问路径可以显示ip地址
 info:
-  app.name: study-springcloud-micoservices
+  app.name: study-springcloud-dept
   company.name: www.blj.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
