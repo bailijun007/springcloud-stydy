@@ -1,0 +1,12 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-study-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/bailijun007/springcloud-study-config.git
+          #username: 18756096010@163.com   #账号
+          #password: bailijunisno.1  #密码
