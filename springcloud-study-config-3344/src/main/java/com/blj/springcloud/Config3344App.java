@@ -10,5 +10,4 @@ public class Config3344App {
     public static void main(String[] args) {
         SpringApplication.run(Config3344App.class,args);
     }
-
 }

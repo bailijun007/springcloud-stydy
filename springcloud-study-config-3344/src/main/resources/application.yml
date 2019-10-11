@@ -8,5 +8,5 @@ spring:
       server:
         git:
           uri: https://github.com/bailijun007/springcloud-study-config.git
-          #username: 18756096010@163.com   #账号
-          #password: bailijunisno.1  #密码
+          #username:   #账号
+          #password:  #密码
