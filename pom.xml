@@ -22,6 +22,7 @@
         <module>springcloud-study-consumer-hystrix-dashboard</module>
         <module>springcloud-study-zuul-gateway-9527</module>
         <module>springcloud-study-config-3344</module>
+        <module>springcloud-study-config-client-3355</module>
 
     </modules>
     <properties>
