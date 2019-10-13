@@ -24,6 +24,8 @@
         <module>springcloud-study-config-3344</module>
         <module>springcloud-study-config-client-3355</module>
 
+
+
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
