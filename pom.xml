@@ -23,7 +23,8 @@
         <module>springcloud-study-zuul-gateway-9527</module>
         <module>springcloud-study-config-3344</module>
         <module>springcloud-study-config-client-3355</module>
-
+        <module>springcloud-study-config-eureka-client7001</module>
+        <module>springcloud-study-config-dept-client-8001</module>
 
 
     </modules>
