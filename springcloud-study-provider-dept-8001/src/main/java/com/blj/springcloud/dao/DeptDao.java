@@ -7,7 +7,6 @@ import org.mybatis.spring.annotation.MapperScan;
 
 import java.util.List;
 
-@Mapper
 public interface DeptDao {
 
     //增加部门

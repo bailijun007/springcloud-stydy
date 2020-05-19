@@ -27,7 +27,7 @@ public class DeptClientServiceFallBackFactory implements FallbackFactory<DeptCli
                   }
 
             @Override
-            public List list() {
+            public List     list() {
                 return null;
             }
         };

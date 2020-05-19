@@ -44,9 +44,11 @@ mybatis:
 eureka:
   client:
     service-url:
-      #defaultZone: http://localhost:7001/eureka
-      defaultZone: http://localhost:7001/eureka,http://localhost:7004/eureka,http://localhost:7003/eureka
+      defaultZone: http://localhost:7001/eureka
+#      defaultZone: http://localhost:7001/eureka,http://localhost:7004/eureka,http://localhost:7003/eureka
 
+
+#actuator 配置
   instance:
     instance-id:  cloud-dept8001 #自定义服务名称信息
     prefer-ip-address: true   #访问路径可以显示ip地址

@@ -4,6 +4,7 @@ import com.blj.springcloud.entities.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import sun.misc.Request;
 
 import java.util.List;
 
@@ -22,24 +23,28 @@ public class DeptController_Consumer {
 
     @PostMapping(value = "/dept/add")
     public boolean add(@RequestBody Dept dept){
-        return  restTemplate.postForObject(REST_URL_PREFFIX+"/dept/add",dept,Boolean.class);
+         String url = REST_URL_PREFFIX + "/dept/add";
+        return  restTemplate.postForObject(url, dept,Boolean.class);
     }
 
    // @GetMapping(value ="/dept/get/{deptno}")
    @RequestMapping(value = "/dept/get/{deptno}",method = RequestMethod.GET)
     public Dept get(@PathVariable("deptno") Long deptno){
-        return  restTemplate.getForObject(REST_URL_PREFFIX+"/dept/get/"+deptno,Dept.class);
+        String url = REST_URL_PREFFIX + "/dept/get/" + deptno;
+       return  restTemplate.getForObject(url,Dept.class);
     }
 
     @GetMapping(value ="/dept/list")
     public List<Dept> list(){
-        return  restTemplate.getForObject(REST_URL_PREFFIX+"/dept/list",List.class);
+         String url = REST_URL_PREFFIX + "/dept/list";
+        return  restTemplate.getForObject(url,List.class);
     }
 
     @RequestMapping(value = "/dept/discovery",method = RequestMethod.GET)
     public Object discovery(){
+         String url = REST_URL_PREFFIX + "/dept/discovery";
         return  restTemplate.getForObject(
-                REST_URL_PREFFIX+"/dept/discovery",
+                url,
                 Object.class);
     }
 
